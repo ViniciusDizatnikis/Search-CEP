@@ -5,6 +5,7 @@ import api from "./api";
 import mapacep from './img/composicao-cep-correios-01-768x468.png.webp';
 import imgCep from './img/significado-numeros-cep.webp';
 import logo from './img/Logo.png';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const [cepInvalido, setCepInvalido] = useState(false);
