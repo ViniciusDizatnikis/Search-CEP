@@ -83,6 +83,7 @@ function App() {
         setCepInvalido(true);
       }
     } catch (error) {
+      console.log(error);
       setCepInvalido(true);
     } finally {
       setLoading(false);
