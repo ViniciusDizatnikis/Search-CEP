@@ -1,11 +1,10 @@
-import { FaBars, FaSearch, FaInstagram, FaLinkedin, FaGithub, FaTimes, FaReact } from "react-icons/fa";
+import { FaBars, FaSearch, FaInstagram, FaLinkedin, FaGithub, FaTimes, FaReact, FaQuestion, FaHome } from "react-icons/fa";
 import './style.css';
 import { useState, useRef, useEffect } from "react";
 import api from "./api";
 import mapacep from './img/composicao-cep-correios-01-768x468.png.webp';
 import imgCep from './img/significado-numeros-cep.webp';
 import logo from './img/Logo.png';
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const [cepInvalido, setCepInvalido] = useState(false);
@@ -14,7 +13,7 @@ function App() {
   const [cep, setCep] = useState({});
   const [loading, setLoading] = useState(false);
   const [isCepLoaded, setIsCepLoaded] = useState(false);
-  const parte2Ref = useRef(null);
+  const resultado = useRef(null);
   const buscar = useRef(null);
   const oqRef = useRef(null);
   const sigCep = useRef(null);
@@ -78,9 +77,10 @@ function App() {
 
       if (response.data.cep) {
         setCepInvalido(false);
-        rolagem(parte2Ref);
+        rolagem(resultado);
       } else {
         setCepInvalido(true);
+        rolagem(resultado)
       }
     } catch (error) {
       console.log(error);
@@ -112,10 +112,10 @@ function App() {
           <div className={`sidebar ${sidebar ? 'active' : ''}`}>
             <ul>
               <FaTimes onClick={closeSidebar} className="fechar" />
-              <li><a onClick={() => { rolagem(buscar); closeSidebar(); }}>Buscar</a></li>
-              <li><a onClick={() => { rolagem(oqRef); closeSidebar(); }}>O que é um CEP?</a></li>
-              <li><a onClick={() => { rolagem(sigCep); closeSidebar(); }}>O que significa o CEP?</a></li>
-              <li><a onClick={() => { rolagem(sobre); closeSidebar(); }}>Sobre</a></li>
+              <li><a onClick={() => { rolagem(buscar); closeSidebar(); }}>{sidebar && <FaSearch/>} Buscar</a></li>
+              <li><a onClick={() => { rolagem(oqRef); closeSidebar(); }}> {sidebar && <FaQuestion/>} que é um CEP?</a></li>
+              <li><a onClick={() => { rolagem(sigCep); closeSidebar(); }}>{sidebar && <FaQuestion/>} O que significa o CEP?</a></li>
+              <li><a onClick={() => { rolagem(sobre); closeSidebar(); }}>{sidebar && <FaHome/>} Sobre</a></li>
               {sidebar && <li className="react">Criado com <FaReact /></li>}
             </ul>
           </div>
@@ -138,8 +138,8 @@ function App() {
         </button>
       </div>
 
-      <div className="parte2" ref={parte2Ref}>
-        <main className="main">
+      <div className="parte2">
+        <main className="main" ref={resultado}>
           {isCepLoaded ? (
             <>
               {cepInvalido ? (
@@ -170,7 +170,7 @@ function App() {
 
       <div className="parte3">
         <div className="oqueDiv" ref={oqRef}>
-          <h1>O que é um CEP?</h1>
+          <h1 className="titulo">O que é um CEP?</h1>
           <p>
             O Código de Endereçamento Postal (CEP) é um sistema numérico dos Correios do Brasil, composto por oito
             dígitos que organizam endereços e facilitam a entrega de correspondências. Os primeiros dígitos indicam
