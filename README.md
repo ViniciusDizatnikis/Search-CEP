@@ -2,7 +2,7 @@
 
 <p>Desenvolvi um site para consultar CEPs com o objetivo de melhorar minhas habilidades em desenvolvimento web e ver do que sou capaz com as tecnologias que estou aprendendo. Esse projeto foi um grande desafio e me ajudou a praticar desde a criação da interface até a integração com APIs para conseguir dados em tempo real.</p>
 
-<img src="src/img/Logo.png" style="width: 80px; height: auto;"> <h1>SEARCH CEP</h1>
+<img src="src/img/Logo.png" style=" margin-left: 20px; width: 80px; height: auto;"> <h1>SEARCH CEP</h1>
 
 <h2>Objetivos do Projeto</h2>
 <p>O principal objetivo desse site era criar uma ferramenta prática e fácil de usar, onde qualquer pessoa pudesse digitar um CEP e receber informações detalhadas. Além de oferecer essa funcionalidade, quis exercitar minhas habilidades em resolver problemas, melhorar a experiência do usuário e deixar o site mais rápido e responsivo.</p>
