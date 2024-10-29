@@ -215,9 +215,9 @@ function App() {
 
       <footer>
         <ul>
-          <li><a href="https://www.instagram.com/vinix_dz/"><FaInstagram /></a></li>
-          <li><a href="https://www.linkedin.com/in/vinicius-dizatnikis-80307a30a/"><FaLinkedin /></a></li>
-          <li><a href="https://github.com/ViniciusDizatnikis"><FaGithub /></a></li>
+          <li><a href="https://www.instagram.com/vinix_dz/" target="_blank"><FaInstagram /></a></li>
+          <li><a href="https://www.linkedin.com/in/vinicius-dizatnikis-80307a30a/" target="_blank"><FaLinkedin /></a></li>
+          <li><a href="https://github.com/ViniciusDizatnikis" target="_blank"><FaGithub /></a></li>
         </ul>
         <p>&copy; 2024 Vinicius Dizatnikis. Todos os direitos reservados.</p>
       </footer>
