@@ -51,3 +51,8 @@
 <p>Criar esse site de consulta de CEP foi uma experiência incrível. Ele me permitiu praticar minhas habilidades técnicas, desde o desenvolvimento de interfaces responsivas até a integração com APIs. Além disso, o projeto me desafiou a pensar em usabilidade, design e performance de uma maneira mais completa. Estou muito satisfeito com o resultado e animado para as melhorias que posso fazer no futuro!</p>
 
 <p> Você pode acessar o <a href ="https://search-cep-beta-eight.vercel.app" target = "_blank" >Search CEP</a> por aqui!</p>
+
+<hr>
+
+<p>&copy; 2024 Vinicius Dizatnikis. Todos os direitos reservados.</p>
+
