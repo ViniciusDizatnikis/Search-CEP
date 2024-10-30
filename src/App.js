@@ -96,10 +96,16 @@ function App() {
     }
   };
 
+  const pagAt = ()=>{
+    window.scrollTo({top:0});
+
+    window.location.reload();
+  }
+
   return (
     <div className="container">
       <div className="cabecalho">
-        <div className="LogoC" onClick={handleReloadPage}>
+        <div className="LogoC" onClick={pagAt}>
           <img src={logo} alt="Logo" />
           <h1>Search CEP</h1>
         </div>
