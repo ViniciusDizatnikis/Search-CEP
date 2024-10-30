@@ -113,8 +113,8 @@ function App() {
             <ul>
               <FaTimes onClick={closeSidebar} className="fechar" />
               <li><a onClick={() => { rolagem(buscar); closeSidebar(); }}>{sidebar && <FaSearch/>} Buscar</a></li>
-              <li><a onClick={() => { rolagem(oqRef); closeSidebar(); }}> {sidebar && <FaQuestion/>} que é um CEP?</a></li>
-              <li><a onClick={() => { rolagem(sigCep); closeSidebar(); }}>{sidebar && <FaQuestion/>} O que significa o CEP?</a></li>
+              <li><a onClick={() => { rolagem(oqRef); closeSidebar(); }}> {sidebar && <FaQuestion/>} que é um CEP</a></li>
+              <li><a onClick={() => { rolagem(sigCep); closeSidebar(); }}>{sidebar && <FaQuestion/>} O que significa o CEP</a></li>
               <li><a onClick={() => { rolagem(sobre); closeSidebar(); }}>{sidebar && <FaHome/>} Sobre</a></li>
               {sidebar && <li className="react">Criado com <FaReact /></li>}
             </ul>
